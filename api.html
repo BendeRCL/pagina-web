@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futurama API</title>
+  <link rel="stylesheet" href="css/api-styles.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="nav-container">
+      <div class="logo">🚀 Futurama API</div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#characters">Personajes</a>
+        <a href="#planets">Planetas</a>
+        <a href="#episodes">Episodios</a>
+        <a href="#quotes">Frases</a>
+      </nav>
+
+      <button class="btn" id="refreshBtn">🔄 Actualizar</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="characters">
+      <h2>🎭 Personajes de Futurama</h2>
+      <div id="charactersContainer" class="grid"></div>
+    </section>
+
+    <section id="planets">
+      <h2>🌍 Planetas</h2>
+      <div id="planetsContainer" class="grid"></div>
+    </section>
+
+    <section id="episodes">
+      <h2>📺 Episodios</h2>
+      <div id="episodesContainer" class="grid"></div>
+    </section>
+
+    <section id="quotes">
+      <h2>💬 Frases Famosas</h2>
+      <div id="quotesContainer" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Futurama API - Todos los derechos reservados | <a href="curriculum.html">Contrátame</a></p>
+  </footer>
+
+  <script src="js/apis.js"></script>
+</body>
+
+</html>

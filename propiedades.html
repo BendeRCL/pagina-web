@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propiedades - Arriendo y Venta</title>
+  <link rel="stylesheet" href="css/propiedades-styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h1 class="logo">🏠 Propiedades Express</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="#alquiler" class="nav-link">Arriendo</a></li>
+          <li><a href="#venta" class="nav-link">Venta</a></li>
+          <li><a href="api.html" class="nav-link">Futurama API</a></li>
+        </ul>
+        <button class="btn-nav-cta" type="button" aria-label="Contactar">
+          💬 Contactar
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="alquiler" class="propiedades-section">
+      <div class="section-header">
+        <h2>🔑 Propiedades en Arriendo</h2>
+        <p>Encuentra las mejores opciones para vivir en Nueva Nueva York</p>
+      </div>
+
+      <div class="filtros">
+        <input type="text" id="filtroArriendo" placeholder="Buscar por nombre..." class="filtro-input">
+        <select id="ordenArriendo" class="filtro-select">
+          <option value="nombre">Ordenar por: Nombre</option>
+          <option value="precio-asc">Precio: Menor a Mayor</option>
+          <option value="precio-desc">Precio: Mayor a Menor</option>
+          <option value="habitaciones">Habitaciones</option>
+        </select>
+      </div>
+
+      <div id="arrendoContainer" class="propiedades-grid"></div>
+    </section>
+
+    <section id="venta" class="propiedades-section">
+      <div class="section-header">
+        <h2>🏡 Propiedades en Venta</h2>
+        <p>Invierte tu futuro en una propiedad de calidad</p>
+      </div>
+
+      <div class="filtros">
+        <input type="text" id="filtroVenta" placeholder="Buscar por nombre..." class="filtro-input">
+        <select id="ordenVenta" class="filtro-select">
+          <option value="nombre">Ordenar por: Nombre</option>
+          <option value="precio-asc">Precio: Menor a Mayor</option>
+          <option value="precio-desc">Precio: Mayor a Menor</option>
+          <option value="habitaciones">Habitaciones</option>
+        </select>
+      </div>
+
+      <div id="ventaContainer" class="propiedades-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p><time datetime="2026">© 2026</time> Propiedades Express - Todos los derechos reservados</p>
+          <p>Contacto: <a href="mailto:info@propiedadesexpress.com">info@propiedadesexpress.com</a></p>
+          <p>Ubicación: Nueva Nueva York, Año 3000</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/propiedades.js"></script>
+</body>
+
+</html>

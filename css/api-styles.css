@@ -1,0 +1,313 @@
+/* ==================== VARIABLES CSS ==================== */
+:root {
+    --color-primary: #FF6D00;
+    --color-secondary: #00BCD4;
+    --color-dark: #0f1117;
+    --color-dark-alt: #1a1d25;
+    --color-light: #f5f5f5;
+    --color-accent: #FFD700;
+    --color-text: #e0e0e0;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-alt) 100%);
+    min-height: 100vh;
+}
+
+.topbar {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-shadow: 0 0 20px rgba(255, 109, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color var(--transition);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width var(--transition);
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 109, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 109, 0, 0.5);
+    background: #FF8C00;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(255, 109, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.card h3 {
+    color: var(--color-accent);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.card p strong {
+    color: var(--color-secondary);
+}
+
+.empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.quote-card {
+    background: linear-gradient(135deg, rgba(255, 109, 0, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-card:hover {
+    background: linear-gradient(135deg, rgba(255, 109, 0, 0.2) 0%, rgba(0, 188, 212, 0.2) 100%);
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.quote-author {
+    font-weight: bold;
+    color: var(--color-secondary);
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 2px solid var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer p {
+    color: #888;
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer a:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        order: 2;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
